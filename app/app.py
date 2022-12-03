@@ -21,7 +21,7 @@ def screenshot():
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument('--disable-dev-shm-usage')
     driver = webdriver.Chrome(chrome_options=chrome_options)
-    driver.set_page_load_timeout(10)
+    driver.set_page_load_timeout(60)
     driver.get(url)
     screenshot = driver.get_screenshot_as_png()
     driver.quit()
